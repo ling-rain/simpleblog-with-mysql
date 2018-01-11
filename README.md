@@ -22,4 +22,7 @@ DB_NAME  //i.e. blog
 DB_USERNAME //mysql username
 DB_PASSWORD //mysql password
 
+ps: Related to hcpaas/springmvc-mysql-blog
+
+
 
