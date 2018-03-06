@@ -12,7 +12,8 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 ENV TOMCAT_VERSION 8.0.49
 RUN mkdir -p "$CATALINA_HOME"
 # RUN cd /root && curl -o apache-tomcat.tar.gz http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz && tar -zxvf apache-tomcat.tar.gz && mv /root/apache-tomcat-$TOMCAT_VERSION/* /usr/local/tomcat/ && rm -rf /usr/local/tomcat/webapps/* && rm -rf apache-tomcat*
-ADD apache-tomcat.tar.gz /usr/local/tomcat/
+ADD apache-tomcat.tar.gz /root
+RUN mv /root/apache-tomcat-8.0.49/* /usr/local/tomcat/
 RUN ls -l /usr/local/tomcat/
 RUN rm -rf /usr/local/tomcat/webapps/* 
 
